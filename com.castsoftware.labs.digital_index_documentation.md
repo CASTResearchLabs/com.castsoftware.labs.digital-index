@@ -44,6 +44,8 @@ The Transaction Ready Index is based on the following Quality Rules
 * Avoid transactions with too many severe Efficiency - Expensive Calls in Loops issues along the path
 * Avoid transactions with too many severe Programming Practices - Unexpected Behavior issues along the path
 
+Default transaction-rule settings require to spot issues in more than 2 distinct objects for more than 2 distinct rules to mark a transaction as a violation. Considered transactions are AFP transactions. 
+
 The Data Ready Index is based on the following Quality Rules
 * Avoid data entities with too many severe Efficiency - SQL and Data Handling Performance issues
 * Avoid data entities with too many severe Programming Practices - Error and Exception handling issues
@@ -54,7 +56,7 @@ The Data Ready Index is based on the following Quality Rules
 * Avoid data entities with too many severe Documentation - Volume of Comments issues
 * Avoid data entities with too many severe Complexity - Algorithmic and Control Structure Complexity issues
 
-
+Default data-rule settings require to spot issues in more than 1 distinct object for more than 1 distinct rule to mark a data entity as a violation. Considered data entities are AFP data entities.
 
 # In what situation should you install this extension?
 
@@ -87,6 +89,7 @@ This extension is currently supported on CAST databases installed on CAST Storag
 # Prerequisites
 
 * An installation of any compatible release of CAST AIP \(see support information above\)
+* For best results, ensure the data entities identifications is properly configured (if not, the Data Risk Index will be N\/A)
 * For best results, ensure the transaction identifications is properly configured (if not, the Transaction Risk Index will be N\/A)
 
 # Bug Fix List
