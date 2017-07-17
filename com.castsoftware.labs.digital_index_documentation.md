@@ -110,6 +110,8 @@ The installation steps are the following:
 * run the update \/ the installation  
 * open CAST Management Studio
 * import the Assessment Model from the Dashboard Service processed in steps \#3 to \#6 above; this is a _Mandatory_ step to start computing the new indicator, one MUST import and use the Assessment Model from the Dashboard that was updated with the extension
+* to allow investigation along the Digital Ready Index findings in CAST AED, you need to change the "filterHealthFactor" parameter from the ..\\engineering\\resources\\ced.json web application configuration file to "false" from "true"
+* to offer a direct access to Digital Ready Index analytics in CAST AAD, you need to add "QualityIndicatorResult" and "QualityIndicatorResults" tiles targeting the ID 2015200 in ..\\portal\\resources\\app.json and ..\\portal\\resources\\cmp.json web application configuration files
 
 # Packaging, delivering and analyzing your source code
 
