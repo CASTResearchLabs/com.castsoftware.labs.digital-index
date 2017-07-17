@@ -44,7 +44,7 @@ The Transaction Ready Index is based on the following Quality Rules
 * Avoid transactions with too many severe Efficiency - Expensive Calls in Loops issues along the path
 * Avoid transactions with too many severe Programming Practices - Unexpected Behavior issues along the path
 
-Default transaction-rule settings require to spot issues in more than 2 distinct objects for more than 2 distinct rules to mark a transaction as a violation. Considered transactions are AFP transactions. 
+Default transaction-rule settings require to spot issues in more than 2 distinct objects for more than 2 distinct rules to mark a transaction as a violation. Considered transactions are AFP transactions. Considered issues are violations to severe enough rules related to the Technical Criterion referenced in the rule name. E.g.: "Avoid transactions with too many severe Programming Practices - Error and Exception Handling issues along the path" rule consider accumulation of violations to quality rules from the "Programming Practices - Error and Exception Handling" Technical Criterion that have either the Critical Contribution flag either a large enough Violation Index ("large enough" is defined by |ln(VI)| > 3). The list of considered violations is therefore dynamic and would adapt to languages, frameworks, and technologies covered by AIP extensions).
 
 The Data Ready Index is based on the following Quality Rules
 * Avoid data entities with too many severe Efficiency - SQL and Data Handling Performance issues
@@ -56,7 +56,7 @@ The Data Ready Index is based on the following Quality Rules
 * Avoid data entities with too many severe Documentation - Volume of Comments issues
 * Avoid data entities with too many severe Complexity - Algorithmic and Control Structure Complexity issues
 
-Default data-rule settings require to spot issues in more than 1 distinct object for more than 1 distinct rule to mark a data entity as a violation. Considered data entities are AFP data entities.
+Default data-rule settings require to spot issues in more than 1 distinct object for more than 1 distinct rule to mark a data entity as a violation. Considered data entities are AFP data entities. Considered issues are violations to severe enough rules related to the Technical Criterion referenced in the rule name (similarly to the transaction-rule above)
 
 # In what situation should you install this extension?
 
