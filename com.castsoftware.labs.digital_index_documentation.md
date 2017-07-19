@@ -32,6 +32,9 @@ To answer these questions, the following metrics are implemented:
 What about transaction- and data entity-level Quality Rules?
 * The transaction-level Quality Rules allow to focus on the parts of the software that matter most for the task at hand: the goal is not to cleanse the whole software from structural quality issues but to reuse and adapt what needs be, no more, no less.
 * The data entity-level Quality Rules follow the same focussed approach with an additional twist to it: "side-processes" can also jeopardize the data even though they are not involved in exposed transactions. 
+* Both kinds of Quality Rules rely on a super-additivity principle: individual structural quality issues are already part of traditional AIP assessment; what makes the difference here is the accumulation in inter-connected software components of similar issues.
+* Both kinds of Quality Rules leverage the ability to bridge the gap between software components and business-related knowledge (which user-facing transactions are interesting, business-wise, for such transformation? which data entities?)
+* Both kinds of Quality Rules are compliant with the AFP (Automated Function Points) OMG standard, meaning that only functional data entities and transactions are assessed, thus removing the noise from technical data and transactions)
   
 The Research Labs released this first version of the Digital Ready Index to leverage the expertise and experience of customers in order to fine-tune its exact composition and collect feedback.
 
