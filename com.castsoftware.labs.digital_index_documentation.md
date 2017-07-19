@@ -4,6 +4,7 @@ This extension provides computation of the following new assessment indicator\(s
 
 * the _Digital Ready index_
 * supporting Technical Criteria
+* supporting Quality Rules
 
 ## Problem Statement
 
@@ -82,11 +83,11 @@ Initial release.
 # _com.castsoftware.labs.digital-index_ technology support
 
 All technologies supported out-of-the-box by CAST AIP are supported.
-In case of technologies supported by some AIP extensions, contact the Research Labs to build a compatible CloudReady index.
+In case of technologies supported by some AIP extensions, the delivery of AFP configuration settings and of severe-enough Quality Rules to contribute to the Technical Criteria that are covered by the transaction- and data entity-level Quality Rules is enough to make the extension work.
 
 # Function Point, Quality and Sizing support
 
-This extension is designed to bring new quality indicator aside existing ones.
+This extension is designed to bring new quality indicators aside existing ones.
 
 # CAST AIP compatibility
 
