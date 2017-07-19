@@ -8,12 +8,18 @@ This extension provides computation of the following new assessment indicator\(s
 ## Problem Statement
 
 In order to leverage legacy IT assets via a digital transformation program, there is a need to assess the challenges IT organizations would face.
+Typically, the challenges revolve around the following aspects:
+* can you reliably trust transformation plans designed to open business data and processes to new communication channels and third-party software that are based on theoritical architecture? In other words, is the software really built the way you think it is so that your transformational plans are applicable?
+* can you comfortably rely on existing accesses to business data and processes? In other words, can you easily reuse existing transactions?
+* can you comfortably rely on existing business data? In other words, can you easily reuse existing data entities without risk that the software (in its entirety, not only the transactions you plan to reuse and expose) will corrupt it, make it unavailable or slow to access?
+Any negative answer would mean at least some additional effort, ranging from a "simple" clean-up of the issues to major re-engineering.
+Assessing the likelyhood of such additional effort is the problem at hand.
 
 ## Research Labs proposal
 
 The Research Labs offer a solution based on CAST AIP Assessment Model, following a Goal-Question-Metric approach.
 
-* The _Digital Ready Index_ goal, modeled as a Business Criterion, based on the answers to the following three questions:
+* The _Digital Ready Index_ goal, modeled as a Business Criterion, is based on the answers to the following three questions:
 * The _Architecture Ready Index_ question: is the software complying to the official architecture blueprint? 
 * The _Transaction Ready Index_ question: are the existing transactions from the software safe enough to be exposed and reused during the digital transformation?
 * The _Data Ready Index_ question: assumming there are clean transactions managing the data entities from the software, are they safe from side-processes that use them as well?  
@@ -23,6 +29,9 @@ To answer these questions, the following metrics are implemented:
 * Transaction-level Quality Rules, identifying transactions which accumulates too many ("too many" being supported by user-defined thresholds) issues in their midst that are related to the following areas: error and exception handling, data and sql efficiency, unexpected behaviors, expensive calls in loops 
 * Data entity-level Quality Rules, identifying data entities which which accumulates too many ("too many" being supported by user-defined thresholds) issues in the software items that do use them, directly or not, that related to the following areas: error and exception handling, data and sql efficiency, unexpected behaviors, injections, SQL querying complexity, algorithmic complexity, data access architecture, and documentation 
 
+What about transaction- and data entity-level Quality Rules?
+* The transaction-level Quality Rules allow to focus on the parts of the software that matter most for the task at hand: the goal is not to cleanse the whole software from structural quality issues but to reuse and adapt what needs be, no more, no less.
+* The data entity-level Quality Rules follow the same focussed approach with an additional twist to it: "side-processes" can also jeopardize the data even though they are not involved in exposed transactions. 
   
 The Research Labs released this first version of the Digital Ready Index to leverage the expertise and experience of customers in order to fine-tune its exact composition and collect feedback.
 
